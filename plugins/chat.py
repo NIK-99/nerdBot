@@ -175,8 +175,8 @@ async def msg2(bot, message):
                                            text="Your expense cannot be greater than your income please re-enter")
                   i[0] -= 1
                 else:
-                    ques[5] = f""" 🤑  income : {ans["q1"]}
-  🔥 Pay date : {ans["q2"].split(',')[0]}
+                    ques[5] = f""" 🤑  income : {ans["q2"].split(',')[0]}
+  🔥 Pay date : {ans["q2"].split(',')[1]}
   🌲 Monthly Investments : {ans["q3"]} 
   👽 Expenses : {ans["q4"]}
 
@@ -188,8 +188,8 @@ async def msg2(bot, message):
                 i[0] = 0
                 await bot.send_message(chat_id=message.chat.id, text=ques[0])
             elif message.text.lower() == 'yes':
-                ques[5] = f""" 🤑  income : {ans["q1"]}
-  🔥 Pay date : {ans["q2"].split(',')[0]}
+                ques[5] = f""" 🤑  income : {ans["q2"].split(',')[0]}
+  🔥 Pay date : {ans["q2"].split(',')[1]}
   🌲 Monthly Investments : {ans["q3"]} 
   👽 Expenses : {ans["q4"]}
 
